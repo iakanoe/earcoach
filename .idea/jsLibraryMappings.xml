@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{0000_Aspirin_sf2_file, 0250_SoundBlasterOld_sf2, WebAudioFontPlayer, bootstrap, timbre}" />
+    <file url="file://$PROJECT_DIR$/harmoniccontext/index.html" libraries="{0000_Aspirin_sf2_file, WebAudioFontPlayer, bootstrap}" />
+    <file url="file://$PROJECT_DIR$/harmoniccontext/index.js" libraries="{0000_Aspirin_sf2_file, WebAudioFontPlayer}" />
+    <file url="file://$PROJECT_DIR$/index.html" libraries="{bootstrap}" />
   </component>
 </project>

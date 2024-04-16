@@ -23,21 +23,21 @@ const Bs = C
 
 const keyNames = ["C", "Db", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B"]
 
-var preset = _tone_0000_Aspirin_sf2_file
-var AudioContextFunc = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContextFunc();
-var player = new WebAudioFontPlayer();
+const preset = _tone_0000_Aspirin_sf2_file
+const AudioContextFunc = window.AudioContext || window.webkitAudioContext;
+const audioContext = new AudioContextFunc();
+const player = new WebAudioFontPlayer();
 player.loader.decodeAfterLoading(audioContext, "_tone_0000_Aspirin_sf2_file")
 
-var key = B // random between 0 and 11
-var grade = 3 // random between 0 and 6
-var exampleOctave = 3 // random between 3 and 4
-var octave = exampleOctave
-var score = 0
-var played = 0
-var timesPlayed = 0
+let key = B; // random between 0 and 11
+let grade = 3 // random between 0 and 6
+let exampleOctave = 3 // random between 3 and 4
+let octave = exampleOctave
+let score = 0
+let played = 0
+let timesPlayed = 0
 
-var interactionEnabled = false
+let interactionEnabled = false
 
 window.onload = () => start()
 
@@ -61,7 +61,7 @@ function resetChallenge() {
     key = random(C, B)
     grade = random(0, 6)
     exampleOctave = random(3, 4)
-    octave = random(Math.min(exampleOctave - 1, 3), exampleOctave + 1)
+    octave = random(Math.max(exampleOctave - 1, 3), Math.min(exampleOctave + 1, 5))
     timesPlayed = 0
 
     resetButtons()
